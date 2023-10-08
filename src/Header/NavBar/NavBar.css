@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 85%;
-    height: 100px;
+    height: 110px;
     border-bottom: 1px solid var(--GrayishBlue);
 }
 
@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 45px;
 }
 
 .NavBar--logo img {
@@ -22,31 +23,81 @@
     cursor: pointer;
 }
 
+.Burger--container {
+    display: none;
+}
+
 .NavBar--ul ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    margin-left: 40px;
     gap: 20px;
 }
 
 .NavBar--ul li {
     color: var(--DarkGrayishBlue);
     cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.NavBar--ul li::after {
+    content: '';
+    position: absolute;
+    top: 280%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    transition: width .5s; 
+}
+
+.NavBar--ul li:hover::after {
+    width: 100%; 
+    border: 2px solid var(--Orange);
+}
+
+.NavBar--ul li:hover {
+    color: var(--Black);
 }
 
 .NavBar--shoppingCart {
     display: flex;
+    font-size: 18px;
+    color: var(--DarkGrayishBlue);
     cursor: pointer;
+    transition: .3s;
+}
+
+.NavBar--shoppingCart:hover {
+    color: var(--Black);
 }
 
 .NavBar--profile {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    cursor: pointer;
 }
 
 .NavBar--profile img {
-    width: 50%;
-    cursor: pointer;
+    display: flex;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.NavBar--profile img:hover {
+    border: solid var(--Orange)
+}
+
+
+@media screen and (max-width: 950px) {
+    body {
+        background-color: red;
+    }
+
+    .NavBar--ul ul {
+        display: none;
+    }
+
+    .Burger--container {
+        display: flex;
+    }
 }

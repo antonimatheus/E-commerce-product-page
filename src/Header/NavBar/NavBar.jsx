@@ -1,17 +1,21 @@
 import React from "react";
 import "./NavBar.css"
 
+import Burger from "./Burger.jsx"
+
 import logo from "../../assets/images/logo.svg"
 import profile_picture from "../../assets/images/image-avatar.png"
-import shopping_cart from "../../assets/images/shopping-cart.png"
 
 function NavBar() {
     return (
         <div className="NavBar--container">
             <div className="NavBar--block1">
+                <Burger />
+                
                 <div className="NavBar--logo">
                     <img src={logo} alt="logo" />
                 </div>
+
                 <div className="NavBar--ul">
                     <ul>
                         <li>Collections</li>
@@ -22,10 +26,11 @@ function NavBar() {
                     </ul>
                 </div>
             </div>
+            
 
             <div className="NavBar--block2">
                 <div className="NavBar--shoppingCart">
-                    <img src={shopping_cart} alt="shopping cart" />
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </div>
                 <div className="NavBar--profile">
                     <img src={profile_picture} alt="profile picture" />

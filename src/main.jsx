@@ -8,13 +8,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 /*
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
   Sneaker Company
 
   Fall Limited Edition Sneakers
@@ -28,5 +21,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   0
   Add to cart
-  
 */

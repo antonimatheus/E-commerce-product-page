@@ -12,11 +12,11 @@ function Burger() {
 
     return (
         <div className="Burger--container">
-            <div>
+            <div className="Burger--icon">
                 <img src={burger ? icon_close : icon_menu} alt="icon menu" onClick={showLi} />
             </div>
             {burger && (
-                <div className="">
+                <div className="Burger--ul">
                 <ul>
                     <li>Collections</li>
                     <li>Men</li>

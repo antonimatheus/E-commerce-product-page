@@ -27,6 +27,10 @@
     display: none;
 }
 
+.Burger--icon {
+    z-index: 2;
+}
+
 .NavBar--ul ul {
     display: flex;
     flex-direction: row;
@@ -72,6 +76,36 @@
     color: var(--Black);
 }
 
+.Cart--block {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 16.3%;
+    left: 70%;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+.Cart--title {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid var(--GrayishBlue);
+}
+
+.Cart--content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--DarkGrayishBlue);
+}
+
 .NavBar--profile {
     display: flex;
     cursor: pointer;
@@ -79,18 +113,22 @@
 
 .NavBar--profile img {
     display: flex;
-    width: 60px;
+    width: 50px;
     border-radius: 50%;
 }
 
 .NavBar--profile img:hover {
-    border: solid var(--Orange)
+    outline: solid var(--Orange)
 }
 
-
 @media screen and (max-width: 950px) {
-    body {
-        background-color: red;
+    .NavBar--container {
+        width: 90%;
+        height: 80px;
+    }
+
+    .NavBar--block1, .NavBar--block2 {
+        gap: 25px;
     }
 
     .NavBar--ul ul {
@@ -99,5 +137,35 @@
 
     .Burger--container {
         display: flex;
+    }
+
+    .Burger--ul ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 210px;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        list-style-type: none;
+        padding: 100px 0px 0px 20px;
+        gap: 25px;
+        background-color: var(--white);
+        box-shadow: 0px 0px 10px black;
+    }
+    
+    .Burger--ul li {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--Black);
+        cursor: pointer;
+        position: relative;
+    }
+
+    .Cart--block {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-126%);
     }
 }

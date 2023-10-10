@@ -1,7 +1,8 @@
 import React from "react";
 import "./NavBar.css"
 
-import Burger from "./Burger.jsx"
+import Burger from "./Burger"
+import Cart from "./Cart";
 
 import logo from "../../assets/images/logo.svg"
 import profile_picture from "../../assets/images/image-avatar.png"
@@ -27,11 +28,8 @@ function NavBar() {
                 </div>
             </div>
             
-
             <div className="NavBar--block2">
-                <div className="NavBar--shoppingCart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                <Cart />
                 <div className="NavBar--profile">
                     <img src={profile_picture} alt="profile picture" />
                 </div>

@@ -8,9 +8,13 @@ function Cart() {
     }
     return (
         <div className="Cart--container">
-            <div className="NavBar--shoppingCart">
-                <i class="fa-solid fa-cart-shopping" onClick={showCart}></i>
-            </div>
+            {cart ? 
+                <i class="fa-solid fa-cart-shopping" onClick={showCart}></i> : 
+                <div className="NavBar--shoppingCart">
+                    <i class="fa-solid fa-cart-shopping" onClick={showCart}></i>
+                </div>
+            }
+            
             {cart && (
                 <div className="Cart--block">
                     <div className="Cart--title">

@@ -142,7 +142,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: 40%;
+        width: 55%;
         height: 100%;
         position: absolute;
         top: 0%;
@@ -151,7 +151,7 @@
         padding: 100px 0px 0px 20px;
         gap: 25px;
         background-color: var(--White);
-        box-shadow: 0px 0px 10px black;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
         z-index: 1;
     }
     
@@ -166,6 +166,6 @@
     .Cart--block {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-126%);
+        transform: translate(-50%,-130%);
     }
 }

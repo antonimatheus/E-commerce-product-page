@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 85%;
-    height: 110px;
+    height: 14vh;
     border-bottom: 1px solid var(--GrayishBlue);
 }
 
@@ -39,6 +39,7 @@
 }
 
 .NavBar--ul li {
+    font-size: 15px;
     color: var(--DarkGrayishBlue);
     cursor: pointer;
     transition: 0.3s;
@@ -48,7 +49,7 @@
 .NavBar--ul li::after {
     content: '';
     position: absolute;
-    top: 280%;
+    top: 270%;
     left: 50%;
     transform: translateX(-50%);
     width: 0%;

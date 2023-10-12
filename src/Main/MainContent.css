@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+.Main--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 86vh;
+}
+
+.Main--block1, .Main--block2 {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Main--imgPrincipal {
+    display: flex;
+    transition: .5s;
+}
+
+.Main--imgPrincipal img {
+    width: 350px;
+    border-radius: 13px;
+}
+
+.Main--imgSub {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Main--imgs {
+    display: flex;
+    transition: .5s;
+}
+
+.Main--imgs img {
+    width: 70px;
+    border-radius: 13px;
+}
+
+.Main--imgs:hover {
+    opacity: .5;
+}
+
+.Main--imgs img:focus {
+    outline: 2px solid var(--Orange);
+}
+
+.Main--subBlock2 {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.Main--subTitle {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--Orange);
+}
+
+.Main--title {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.Main--text {
+    font-size: 15px;
+    margin-top: 25px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.Main--price {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.Main--priceValue {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.Main--priceDiscount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    width: 40px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: var(--Orange);
+    background-color: var(--PaleOrange);
+}
+
+.Main--priceOffer {
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.45);
+    text-decoration: rgba(0, 0, 0, 0.25) line-through;
+}
+
+.Main--quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.Main--iconMinus {
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.Main--iconMinus:hover {
+    opacity: .5;
+}
+
+.Main--numberQuantity {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.Main--iconPlus {
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.Main--iconPlus:hover {
+    opacity: .5;
+}
+
+.Main--button {
+    display: flex;
+    align-items: center;
+}
+
+.Main--button button {
+    width: 240px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 0px 15px rgba(255, 68, 0, 0.4);
+    color: var(--White);
+    background-color: var(--Orange);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.Main--button button:hover {
+    opacity: .5;
+}

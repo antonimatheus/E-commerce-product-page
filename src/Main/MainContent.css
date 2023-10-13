@@ -20,6 +20,7 @@
 .Main--imgPrincipal {
     display: flex;
     transition: .5s;
+    cursor: pointer;
 }
 
 .Main--imgPrincipal img {
@@ -38,6 +39,17 @@
 .Main--imgs {
     display: flex;
     transition: .5s;
+    cursor: pointer;
+}
+.Main--imgs button {
+    border: none;
+    background: none;
+    height: 68px;
+}
+.Main--imgs button:focus {
+    outline: 2px solid var(--Orange);
+    opacity: .3;
+    border-radius: 13px;
 }
 
 .Main--imgs img {
@@ -116,7 +128,15 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
-    gap: 40px;
+    gap: 35px;
+}
+
+.Main--quantityBlock1 {
+    display: flex;
+    padding: 10px;
+    border-radius: 13px;
+    background-color: var(--PaleOrange);
+    gap: 30px;
 }
 
 .Main--iconMinus {
@@ -132,8 +152,10 @@
 
 .Main--numberQuantity {
     display: flex;
+    justify-content: center;
     align-items: center;
     font-weight: 700;
+    width: 30px;
 }
 
 .Main--iconPlus {
@@ -150,10 +172,11 @@
 .Main--button {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .Main--button button {
-    width: 240px;
+    width: 100%;
     height: 45px;
     border-radius: 8px;
     border: none;

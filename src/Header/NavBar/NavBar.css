@@ -49,7 +49,7 @@
 .NavBar--ul li::after {
     content: '';
     position: absolute;
-    top: 270%;
+    top: 275%;
     left: 50%;
     transform: translateX(-50%);
     width: 0%;

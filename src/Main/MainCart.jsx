@@ -46,22 +46,23 @@ function MainCart() {
                 </div>
 
                 <div className="Main--quantity">
-                    <div className="Main--iconMinus">
-                        <img src={icon_minus} alt="icon minus" onClick={handleChangeMinus} />
-                    </div>
-                    
-                    <div className="Main--numberQuantity">
-                        {quantity}
-                    </div>
-
-                    <div className="Main--iconPlus">
-                        <img src={icon_plus} alt="icon plus" onClick={handleChangePlus} />
+                    <div className="Main--quantityBlock1">
+                        <div className="Main--iconMinus">
+                            <img src={icon_minus} alt="icon minus" onClick={handleChangeMinus} />
+                        </div>
+                        
+                        <div className="Main--numberQuantity">
+                            {quantity}
+                        </div>
+                        <div className="Main--iconPlus">
+                            <img src={icon_plus} alt="icon plus" onClick={handleChangePlus} />
+                        </div>
                     </div>
 
                     <div className="Main--button">
                         <button><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     )

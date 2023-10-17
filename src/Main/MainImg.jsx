@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import "./MainImgFullScreen.css"
+
+import MainImgFullScreen from "./MainImgFullScreen";
 
 import image_product_1 from "../assets/images/image-product-1.jpg";
 import image_product_2 from "../assets/images/image-product-2.jpg";
 import image_product_3 from "../assets/images/image-product-3.jpg";
 import image_product_4 from "../assets/images/image-product-4.jpg";
+
+
+//Erro ao tentar pegar a função handleFullScreen de MainImgFullScreen ao clicar na className="Main--imgPrincipal"
 
 function MainImg() {
   const [mainImage, setMainImage] = useState(image_product_1);
@@ -11,10 +17,23 @@ function MainImg() {
     setMainImage(image);
   };
 
+  const [clicked, setClicked] = useState(false);
+    const handleFullScreen = () => {
+      setClicked(!clicked)
+    }
+
   return (
     <div className="Main--block1">
+
+      <MainImgFullScreen
+          handleFullScreen={handleFullScreen}
+          mainImage={mainImage}
+          handleThumbnailClick={handleThumbnailClick}
+          clicked={clicked}
+      />
+
       <div className="Main--imgPrincipal">
-        <img src={mainImage} alt="image product" />
+        <img src={mainImage} alt="image product" onClick={handleFullScreen}/>
       </div>
       <div className="Main--imgSub">
         <div className="Main--imgs">

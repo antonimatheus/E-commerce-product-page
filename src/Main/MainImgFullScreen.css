@@ -10,33 +10,64 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .Main--imgFullScreenBlock {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 }
 
 .closeImg {
     display: flex;
-    position: absolute;
-    top: 14%;
-    left: 63%;
-    transform: translate(-50%,-50%);
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
     border: none;
     background: none;
     cursor: pointer;
 }
 
 .closeImg img {
-    filter: brightness(5);
     transition: .3s;
 }
 
 .closeImg img:hover {
-    transform: scale(1.2);
+    background-color: var(--Orange);
+}
+
+.Main--next, .Main--previous {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--White);
+    cursor: pointer;
+}
+
+.Main--next {
+    top: 45%;
+    left: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.Main--previous {
+    top: 45%;
+    left: 0%;
+    transform: translate(-50%,-50%);
+}
+
+.Main--next img, .Main--previous img {
+    transition: .3s;
+}
+
+.Main--next img:hover, .Main--previous img:hover {
+    background-color: var(--Orange);
 }
 
 .Main--imgPrincipalFullScreen {

@@ -47,8 +47,8 @@
     height: 68px;
 }
 .Main--imgs button:focus {
-    outline: 2px solid var(--Orange);
-    opacity: .3;
+    outline: 2.5px solid var(--Orange);
+    filter: opacity(.5);
     border-radius: 13px;
 }
 

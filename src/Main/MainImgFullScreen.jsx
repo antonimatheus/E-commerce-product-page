@@ -4,9 +4,9 @@ import image_product_1 from "../assets/images/image-product-1.jpg";
 import image_product_2 from "../assets/images/image-product-2.jpg";
 import image_product_3 from "../assets/images/image-product-3.jpg";
 import image_product_4 from "../assets/images/image-product-4.jpg";
-import close from "../assets/images/icon-close.svg";
-import next from "../assets/images/icon-next.svg";
-import previous from "../assets/images/icon-previous.svg";
+const close = <i class="fa-solid fa-xmark"></i>;
+const next = <i class="fa-solid fa-chevron-right"></i>;
+const previous = <i class="fa-solid fa-chevron-left"></i>;
 
 function MainImgFullScreen({
     clicked,
@@ -29,7 +29,7 @@ function MainImgFullScreen({
           <div className="Main--imgFullScreenBlock">
             <div>
             <button onClick={handleCloseFullScreen} className="closeImg">
-                <img src={close} />
+                {close}
             </button>
             </div>
             <div className="Main--imgPrincipalFullScreen">
@@ -37,11 +37,11 @@ function MainImgFullScreen({
             </div>
 
             <div className="Main--next">
-              <img src={next} alt="next" />
+              {next}
             </div>
             
             <div className="Main--previous">
-              <img src={previous} alt="previous" />
+              {previous}
             </div>
 
             <div className="Main--imgSubFullScreen">

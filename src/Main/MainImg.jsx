@@ -8,9 +8,6 @@ import image_product_2 from "../assets/images/image-product-2.jpg";
 import image_product_3 from "../assets/images/image-product-3.jpg";
 import image_product_4 from "../assets/images/image-product-4.jpg";
 
-
-//Erro ao tentar pegar a função handleFullScreen de MainImgFullScreen ao clicar na className="Main--imgPrincipal"
-
 function MainImg() {
   const [mainImage, setMainImage] = useState(image_product_1);
   const handleThumbnailClick = (image) => {

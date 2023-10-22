@@ -152,7 +152,7 @@
         padding: 100px 0px 0px 20px;
         gap: 25px;
         background-color: var(--White);
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 200px 0px 0px rgba(0, 0, 0, 0.4);
         z-index: 1;
     }
     
@@ -168,6 +168,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%,-130%);
-        z-index: 2;
+        z-index: 1;
     }
 }

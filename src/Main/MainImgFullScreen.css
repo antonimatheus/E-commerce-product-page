@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.MainImgFullScreen--Container {
+    display: flex;
+    position: relative;
+}
+
 .Main--imgFullScreen {
     display: flex;
     justify-content: center;
@@ -11,6 +16,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2;
 }
 
 .Main--imgFullScreenBlock {
@@ -72,6 +78,26 @@
     color: var(--Orange);
 }
 
+
+
+
+
+.Main--imgPrincipalFullScreenMobile {
+    display: none;
+}
+
+.Main--nextMobile {
+    display: none;
+}
+
+.Main--previousMobile {
+    display: none;
+}
+
+
+
+
+
 .Main--imgPrincipalFullScreen {
     display: flex;
     transition: .5s;
@@ -123,4 +149,47 @@
     display: flex;
     flex-direction: column;
     width: 65%;
+}
+
+@media screen and (max-width:850px) {
+    .Main--imgPrincipalFullScreenMobile {
+        display: flex;
+    }
+
+    .Main--imgPrincipalFullScreenMobile img {
+        width: 100%;
+    }
+
+    .Main--nextMobile, .Main--previousMobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: var(--White);
+        cursor: pointer;
+    }
+    
+    .Main--nextMobile {
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .Main--previousMobile {
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .Main--nextMobile  i, .Main--previousMobile i {
+        transition: .3s;
+    }
+    
+    .Main--nextMobile:hover, .Main--previousMobilehover:hover {
+        color: var(--Orange);
+    }
+    
 }

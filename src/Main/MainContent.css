@@ -41,11 +41,13 @@
     transition: .5s;
     cursor: pointer;
 }
+
 .Main--imgs button {
     border: none;
     background: none;
     height: 68px;
 }
+
 .Main--imgs button:focus {
     outline: 2.5px solid var(--Orange);
     filter: opacity(.5);
@@ -189,4 +191,70 @@
 
 .Main--button button:hover {
     opacity: .5;
+}
+
+@media screen and (max-width: 800px) {
+    .Main--container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Main--block1, .Main--block2 {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    
+    .Main--block2 {
+        height: 55vh;
+    }
+
+    .Main--imgPrincipal {
+        display: none;
+    }
+
+    .Main--imgSub {
+        display: none;
+    }
+
+    .Main--subBlock2 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .Main--subTitle {
+        display: flex;
+        font-size: 13px;
+    }
+    
+    .Main--title {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    
+    .Main--text {
+        font-size: 16px;
+        margin-top: 25px;
+        color: rgba(0, 0, 0, 0.65);
+    }
+    
+    .Main--price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .Main--quantity {
+        flex-direction: column;
+    }
+
+    .Main--quantityBlock1 {
+        justify-content: space-around;
+        width: 100%;
+    }
 }

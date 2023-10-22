@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "./MainImgFullScreen.css"
 
+import imagesData from "./DataImg";
 import MainImgFullScreen from "./MainImgFullScreen";
 
-import image_product_1 from "../assets/images/image-product-1.jpg";
-import image_product_2 from "../assets/images/image-product-2.jpg";
-import image_product_3 from "../assets/images/image-product-3.jpg";
-import image_product_4 from "../assets/images/image-product-4.jpg";
+const images = [imagesData.image_product_1, imagesData.image_product_2, imagesData.image_product_3, imagesData.image_product_4];
 
 function MainImg() {
-  const [mainImage, setMainImage] = useState(image_product_1);
+
+  const [mainImage, setMainImage] = useState(imagesData.image_product_1);
   const handleThumbnailClick = (image) => {
     setMainImage(image);
   };
@@ -32,43 +31,18 @@ function MainImg() {
       <div className="Main--imgPrincipal">
         <img src={mainImage} alt="image product" onClick={handleFullScreen}/>
       </div>
+
       <div className="Main--imgSub">
-        <div className="Main--imgs">
-          <button>
-              <img
-                src={image_product_1}
-                alt="image product"
-                onClick={() => handleThumbnailClick(image_product_1)}
+        {images.map((image, index) => (
+          <div className="Main--imgsFullScreen" key={index}>
+            <button>
+              <img src={image}
+                alt="image product" 
+                onClick={()=> handleThumbnailClick(image)}
               />
-          </button>
-        </div>
-        <div className="Main--imgs">
-          <button>
-              <img
-                src={image_product_2}
-                alt="image product"
-                onClick={() => handleThumbnailClick(image_product_2)}
-              />
-          </button>
-        </div>
-        <div className="Main--imgs">
-          <button>
-              <img
-                src={image_product_3}
-                alt="image product"
-                onClick={() => handleThumbnailClick(image_product_3)}
-              />
-          </button>
-        </div>
-        <div className="Main--imgs">
-          <button>
-              <img
-                src={image_product_4}
-                alt="image product"
-                onClick={() => handleThumbnailClick(image_product_4)}
-              />
-          </button>
-        </div>
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );

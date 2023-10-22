@@ -124,7 +124,7 @@
 @media screen and (max-width: 950px) {
     .NavBar--container {
         width: 90%;
-        height: 80px;
+        height: 70px;
     }
 
     .NavBar--block1, .NavBar--block2 {
@@ -168,5 +168,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%,-130%);
+        z-index: 2;
     }
 }

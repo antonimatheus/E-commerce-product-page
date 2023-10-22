@@ -1,49 +1,36 @@
-import React, { useState } from "react";
-import image_product_1 from "../assets/images/image-product-1.jpg";
-import image_product_2 from "../assets/images/image-product-2.jpg";
-import image_product_3 from "../assets/images/image-product-3.jpg";
-import image_product_4 from "../assets/images/image-product-4.jpg";
+import React, { useState, useEffect } from "react";
+import imagesData from "./DataImg";
 
 function MainImgFullScreen({ clicked, handleFullScreen }) {
   const handleCloseFullScreen = () => {
-    handleFullScreen(); // Call the handleFullScreen function from props
+    handleFullScreen();
   };
 
-  const images = [image_product_1, image_product_2, image_product_3, image_product_4];
+  const images = [imagesData.image_product_1, imagesData.image_product_2, imagesData.image_product_3, imagesData.image_product_4];
   
-  const [mainImageFullScreen, setMainImageFullScreen] = useState(image_product_1);
+  const [mainImageFullScreen, setMainImageFullScreen] = useState(imagesData.image_product_1);
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleThumbnailClickFullScreen = (image) => {
-    setMainImageFullScreen(image);
+  useEffect(() => {
+    // Atualiza a imagem principal sempre que o índice atual mudar
+    setMainImageFullScreen(images[currentImageIndex]);
+  }, [currentImageIndex]);
+
+  const handleThumbnailClickFullScreen = (image, index) => {
+    setCurrentImageIndex(index);
   };
 
   const goToNextImage = () => {
-    // Check if the next index is within the bounds of the images array
-    if (currentImageIndex < images.length - 1) {
-      setCurrentImageIndex(currentImageIndex + 1);
-      setMainImageFullScreen(images[currentImageIndex + 1]);
-    } else {
-      // Otherwise, wrap around to the beginning of the array
-      setCurrentImageIndex(0);
-      setMainImageFullScreen(images[0]);
-    }
+    setCurrentImageIndex((currentImageIndex + 1) % images.length);
   };
 
   const goToPreviousImage = () => {
-    // Check if the previous index is within the bounds of the images array
-    if (currentImageIndex > 0) {
-      setCurrentImageIndex(currentImageIndex - 1);
-      setMainImageFullScreen(images[currentImageIndex - 1]);
-    } else {
-      // Otherwise, wrap around to the end of the array
-      setCurrentImageIndex(images.length - 1);
-      setMainImageFullScreen(images[images.length - 1]);
-    }
+    setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
   };
 
   return (
-    <div>
+    <div className="MainImgFullScreen--Container">
       {clicked && (
         <div className="Main--imgFullScreen">
           <div className="Main--imgFullScreenBlock">
@@ -71,7 +58,7 @@ function MainImgFullScreen({ clicked, handleFullScreen }) {
                     <img
                       src={image}
                       alt="image product"
-                      onClick={() => handleThumbnailClickFullScreen(image)}
+                      onClick={() => handleThumbnailClickFullScreen(image, index)}
                     />
                   </button>
                 </div>
@@ -80,6 +67,18 @@ function MainImgFullScreen({ clicked, handleFullScreen }) {
           </div>
         </div>
       )}
+      
+        <div className="Main--imgPrincipalFullScreenMobile">
+          <img src={mainImageFullScreen} alt="image product" />
+        </div>
+
+        <div className="Main--nextMobile" onClick={goToNextImage}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div className="Main--previousMobile" onClick={goToPreviousImage}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </div>
     </div>
   );
 }

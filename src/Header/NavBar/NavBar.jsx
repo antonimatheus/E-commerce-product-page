@@ -29,7 +29,7 @@ function NavBar() {
             </div>
             
             <div className="NavBar--block2">
-                <Cart />
+                <Cart /> <span className="NavBarCart--notification">3</span>
                 <div className="NavBar--profile">
                     <img src={profile_picture} alt="profile picture" />
                 </div>

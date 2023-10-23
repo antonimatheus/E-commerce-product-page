@@ -17,6 +17,13 @@ function MainCart() {
         }
     }
 
+
+    const [cartShop, setCartShop] = useState(false)
+    const handleClick = () => {
+        setCartShop( !cartShop)
+    }
+    
+
     return (
         <div className="Main--block2">
             <div className="Main--subBlock2">
@@ -60,7 +67,7 @@ function MainCart() {
                     </div>
 
                     <div className="Main--button">
-                        <button><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        <button onClick={handleClick}><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
                 </div>
             </div>

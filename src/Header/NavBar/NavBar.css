@@ -29,7 +29,7 @@
 }
 
 .Burger--icon {
-    z-index: 2;
+    z-index: 3;
 }
 
 .NavBar--ul ul {
@@ -138,7 +138,7 @@
     outline: solid var(--Orange)
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
     .NavBar--container {
         width: 90%;
         height: 70px;
@@ -162,15 +162,15 @@
         justify-content: flex-start;
         width: 55%;
         height: 110vh;
-        position: absolute;
+        position: fixed;
         top: 0%;
         left: 0%;
         list-style-type: none;
         padding: 100px 0px 0px 20px;
         gap: 25px;
         background-color: var(--White);
-        box-shadow: 225px 0px 0px rgba(0, 0, 0, 0.4);
-        z-index: 1;
+        box-shadow: 200px 0px 0px rgba(0, 0, 0, 0.4);
+        z-index: 2;
     }
     
     .Burger--ul li {

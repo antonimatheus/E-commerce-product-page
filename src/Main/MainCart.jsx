@@ -88,7 +88,10 @@ function MainCart() {
                     cartShop={cartShop}
                     quantity={quantity}
                     />
-                    <Cart quantity={quantity}/>
+                    <Cart 
+                    cartShop={cartShop}
+                    quantity={quantity}
+                    />
             </div>
         </div>
     )

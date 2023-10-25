@@ -152,6 +152,7 @@
 }
 
 @media screen and (max-width:850px) {
+
     .Main--imgPrincipalFullScreenMobile {
         display: flex;
     }
@@ -188,8 +189,7 @@
         transition: .3s;
     }
     
-    .Main--nextMobile:hover, .Main--previousMobilehover:hover {
+    .Main--nextMobile:hover, .Main--previousMobile:hover {
         color: var(--Orange);
     }
-    
 }

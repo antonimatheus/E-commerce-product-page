@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import icon_plus from "../assets/images/icon-plus.svg"
 import icon_minus from "../assets/images/icon-minus.svg"
 import NavBar from "../Header/NavBar/NavBar";
+import Cart from "../Header/NavBar/Cart";
 
 function MainCart() {
 
@@ -21,8 +22,20 @@ function MainCart() {
     const [cartShop, setCartShop] = useState(false)
     const handleClick = () => {
         setCartShop(!cartShop)
-        window.alert('work')
     }
+
+    function mostrar(e) {
+        e.preventDefault()
+        if(quantity) {
+            handleClick()
+        }
+    }
+
+    
+
+
+
+    
     
 
     return (
@@ -68,10 +81,14 @@ function MainCart() {
                     </div>
 
                     <div className="Main--button">
-                        <button onClick={handleClick}><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        <button onClick={mostrar}><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
                 </div>
-                    <NavBar cartShop={cartShop}/>
+                    <NavBar 
+                    cartShop={cartShop}
+                    quantity={quantity}
+                    />
+                    <Cart quantity={quantity}/>
             </div>
         </div>
     )

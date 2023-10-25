@@ -29,10 +29,11 @@ function NavBar(props) {
             </div>
             
             <div className="NavBar--block2">
-                <Cart /> {props.cartShop && (<span className="NavBarCart--notification">3</span>)}
+                <Cart /> {props.cartShop && (<span className="NavBarCart--notification">{props.quantity}</span>)}
                 <div className="NavBar--profile">
                     <img src={profile_picture} alt="profile picture" />
                 </div>
+                
             </div>
         </div>
     )

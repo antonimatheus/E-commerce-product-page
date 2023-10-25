@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-function Cart() {
+import image_product from "../../assets/images/image-product-1-thumbnail.jpg";
+import iconDelete from "../../assets/images/icon-delete.svg";
+
+function Cart(props) {
 
     const [cart, setCart] = useState(false)
     const showCart = () => {
@@ -20,10 +23,27 @@ function Cart() {
                     <div className="Cart--title">
                         <h4>
                             Cart
+                        
                         </h4>
                     </div>
                     <div className="Cart--content">
-                        <p>Your cart is empty.</p>
+                        <div className="Cart--contentBlock">
+                            <div className="Cart--contentImg">
+                                <img src={image_product} alt="image product" />
+                            </div>
+                            <div className="Cart--contentValue">
+                                <div>Fall Limited Edition Sneakers</div>
+                                <div><p>$125.00 x {props.quantity} <span className="Cart--contentValueTotal">$
+                                {props.quantity * 125}.00</span></p></div>
+                            </div>
+                            <div className="Cart--contentDelete">
+                                <img src={iconDelete} alt="delete" />
+                            </div>
+                        </div>
+                        <div className="Cart--contentCheckout">
+                            <button>Checkout</button>
+                        </div>
+                        
                     </div>
                 </div>
             )}

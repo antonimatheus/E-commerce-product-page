@@ -7,7 +7,7 @@ import Cart from "./Cart";
 import logo from "../../assets/images/logo.svg"
 import profile_picture from "../../assets/images/image-avatar.png"
 
-function NavBar(props) {
+function NavBar() {
     return (
         <div className="NavBar--container">
             <div className="NavBar--block1">
@@ -29,7 +29,8 @@ function NavBar(props) {
             </div>
             
             <div className="NavBar--block2">
-                <Cart /> {props.cartShop && (<span className="NavBarCart--notification">{props.quantity}</span>)}
+                <Cart 
+                />
                 <div className="NavBar--profile">
                     <img src={profile_picture} alt="profile picture" />
                 </div>

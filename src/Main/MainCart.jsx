@@ -7,7 +7,7 @@ import Cart from "../Header/NavBar/Cart";
 
 function MainCart() {
 
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
     function handleChangePlus() {
         setQuantity(quantity + 1)
@@ -84,10 +84,7 @@ function MainCart() {
                         <button onClick={mostrar}><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
                 </div>
-                    <NavBar 
-                    cartShop={cartShop}
-                    quantity={quantity}
-                    />
+                
                     <Cart 
                     cartShop={cartShop}
                     quantity={quantity}

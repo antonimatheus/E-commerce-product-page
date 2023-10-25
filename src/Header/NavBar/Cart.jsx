@@ -11,12 +11,16 @@ function Cart(props) {
     }
     return (
         <div className="Cart--container">
+            {props.cartShop && (<span className="NavBarCart--notification">{props.quantity}</span>)}
+            
             {cart ? 
                 <i class="fa-solid fa-cart-shopping" onClick={showCart}></i> : 
                 <div className="NavBar--shoppingCart">
                     <i class="fa-solid fa-cart-shopping" onClick={showCart}></i>
                 </div>
             }
+            
+            
             
             {cart && (
                 <div className="Cart--block">

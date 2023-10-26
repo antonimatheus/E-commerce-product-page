@@ -2,10 +2,15 @@ import React from "react";
 import "./Header.css"
 import Navbar from "./NavBar/NavBar";
 
-function Header() {
+function Header(props) {
     return (
         <div className="Header--container">
-            <Navbar />
+            <Navbar 
+                quantity={props.quantity}
+                setQuantity={props.setQuantity}
+                cartShop={props.cartShop}
+                setCartShop={props.setCartShop}
+            />
         </div>
     )
 }

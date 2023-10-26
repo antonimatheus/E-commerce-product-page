@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import icon_menu from '../../assets/images/icon-menu.svg'
 import icon_close from '../../assets/images/icon-close.svg'
 
-
 function Burger() {
     const [burger, setBurger] = useState(false)
     const showLi = () => {

@@ -3,12 +3,20 @@ import './MainContent.css'
 import MainImg from "./MainImg";
 import MainCart from "./MainCart";
 
-function MainContent() {
+function MainContent(props) {
 
     return (
         <div className="Main--container">
             <MainImg />
-            <MainCart />
+            <MainCart 
+                quantity={props.quantity}
+                setQuantity={props.setQuantity}
+                cartShop={props.cartShop}
+                setCartShop={props.setCartShop}
+                handleChangePlus={props.handleChangePlus}
+                handleChangeMinus={props.handleChangeMinus}
+                handleClick={props.handleClick}
+            />
         </div>
     )
 }

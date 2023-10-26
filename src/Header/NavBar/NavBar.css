@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 85%;
-    height: 14vh;
+    height: 90px;
     border-bottom: 1px solid var(--GrayishBlue);
 }
 
@@ -50,7 +50,7 @@
 .NavBar--ul li::after {
     content: '';
     position: absolute;
-    top: 275%;
+    top: 265%;
     left: 50%;
     transform: translateX(-50%);
     width: 0%;
@@ -86,9 +86,9 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 145%;
+    top: 50%;
     left: -150%;
-    transform: translate(-50%, 20%);
+    transform: translate(-52%, 24%);
     width: 300px;
     height: 200px;
     border-radius: 5px;
@@ -131,8 +131,6 @@
     color: var(--White);
     background-color: var(--Orange);
 }
-
-
 
 .Cart--contentBlock {
     display: flex;
@@ -188,12 +186,6 @@
     transition: .5s;
     cursor: pointer;
 }
-
-
-
-
-
-
 
 .NavBar--profile {
     display: flex;

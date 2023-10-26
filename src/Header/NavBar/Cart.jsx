@@ -6,9 +6,15 @@ import iconDelete from "../../assets/images/icon-delete.svg";
 function Cart(props) {
 
     const [cart, setCart] = useState(false)
+
     const showCart = () => {
         setCart(!cart)
     }
+
+    const recycle = () => {
+        props.setCartShop(false)
+    }
+    
     return (
         <div className="Cart--container">
             {props.cartShop && (<span className="NavBarCart--notification">{props.quantity}</span>)}
@@ -20,14 +26,11 @@ function Cart(props) {
                 </div>
             }
             
-            
-            
             {cart && (
                 <div className="Cart--block">
                     <div className="Cart--title">
                         <h4>
                             Cart
-                        
                         </h4>
                     </div>
 
@@ -43,7 +46,7 @@ function Cart(props) {
                                     {props.quantity * 125}.00</span></p></div>
                                 </div>
                                 <div className="Cart--contentDelete">
-                                    <img src={iconDelete} alt="delete" />
+                                    <img src={iconDelete} alt="delete" onClick={recycle} />
                                 </div>
                             </div>
                             <div className="Cart--contentCheckout">

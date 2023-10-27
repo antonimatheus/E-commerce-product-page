@@ -3,6 +3,7 @@ import "./Header.css"
 import Navbar from "./NavBar/NavBar";
 
 function Header(props) {
+
     return (
         <div className="Header--container">
             <Navbar 
@@ -10,6 +11,7 @@ function Header(props) {
                 setQuantity={props.setQuantity}
                 cartShop={props.cartShop}
                 setCartShop={props.setCartShop}
+                handleClick={props.handleClick}
             />
         </div>
     )

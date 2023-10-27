@@ -35,15 +35,15 @@ function MainCart(props) {
 
                 <div className="Main--quantity">
                     <div className="Main--quantityBlock1">
-                        <div className="Main--iconMinus">
-                            <img src={icon_minus} alt="icon minus" onClick={props.handleChangeMinus} />
+                        <div className="Main--iconMinus" onClick={props.handleChangeMinus}>
+                            <img src={icon_minus} alt="icon minus"  />
                         </div>
                         
                         <div className="Main--numberQuantity">
                             {props.quantity}
                         </div>
-                        <div className="Main--iconPlus">
-                            <img src={icon_plus} alt="icon plus" onClick={props.handleChangePlus} />
+                        <div className="Main--iconPlus" onClick={props.handleChangePlus}>
+                            <img src={icon_plus} alt="icon plus"  />
                         </div>
                     </div>
 

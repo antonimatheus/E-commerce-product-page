@@ -233,7 +233,7 @@
         padding: 100px 0px 0px 20px;
         gap: 25px;
         background-color: var(--White);
-        box-shadow: 200px 0px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.4);
         z-index: 2;
     }
     
@@ -247,9 +247,10 @@
 
     .Cart--block {
         display: flex;
+        position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-83%, 20%);
+        transform: translate(-70%, 20%);
         z-index: 1;
     }
 }

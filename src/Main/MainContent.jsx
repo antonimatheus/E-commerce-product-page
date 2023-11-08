@@ -16,6 +16,7 @@ function MainContent(props) {
                 handleChangePlus={props.handleChangePlus}
                 handleChangeMinus={props.handleChangeMinus}
                 handleClick={props.handleClick}
+                mostrar={props.mostrar}
             />
         </div>
     )

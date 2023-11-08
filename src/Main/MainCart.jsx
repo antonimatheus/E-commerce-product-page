@@ -2,7 +2,7 @@ import React from "react";
 
 import icon_plus from "../assets/images/icon-plus.svg"
 import icon_minus from "../assets/images/icon-minus.svg"
-import ButtonSubmit from "../Header/NavBar/ButtonSubmit";
+import ButtonSubmit from "./ButtonSubmit";
 
 function MainCart(props) {
     return (
@@ -52,6 +52,7 @@ function MainCart(props) {
                     quantity={props.quantity} 
                     tempQuantity={props.tempQuantity}
                     setTempQuantity={props.setTempQuantity}
+                    mostrar={props.mostrar}
                 />
                 </div>
             </div>

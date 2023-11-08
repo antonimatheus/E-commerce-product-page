@@ -5,7 +5,7 @@ import MainContent from './Main/MainContent';
 
 function App() {
 
-  const [quantity, setQuantity] = useState(1)
+  const [quantity, setQuantity] = useState(0)
   const [cartShop, setCartShop] = useState(false)
   
     function handleChangePlus() {
@@ -23,6 +23,12 @@ function App() {
         setCartShop(true)
       }
   }
+
+  function mostrar() {
+    if (quantity) {
+        handleClick()  
+    }
+}
 
   return (
     
@@ -43,6 +49,7 @@ function App() {
         handleChangePlus={handleChangePlus}
         handleChangeMinus={handleChangeMinus}
         handleClick={handleClick}
+        mostrar={mostrar}
       />
     </div>
   )

@@ -50,16 +50,17 @@
 .NavBar--ul li::after {
     content: '';
     position: absolute;
-    top: 265%;
+    top: 275%;
     left: 50%;
     transform: translateX(-50%);
-    width: 0%;
-    transition: width .5s; 
+    width: 0;
+    height: 3px;
+    background-color: var(--Orange);
+    transition: width .5s;
 }
 
 .NavBar--ul li:hover::after {
-    width: 100%; 
-    border: 2px solid var(--Orange);
+    width: 100%;
 }
 
 .NavBar--ul li:hover {
@@ -190,17 +191,18 @@
 .NavBar--profile {
     display: flex;
     cursor: pointer;
+    transition: .5s;
 }
 
 .NavBar--profile img {
-    display: flex;
     width: 50px;
     border-radius: 50%;
 }
 
 .NavBar--profile img:hover {
-    outline: solid var(--Orange)
+    outline: 2px solid var(--Orange); /* Adicione uma borda ao invés de um outline */
 }
+
 
 @media screen and (max-width: 850px) {
     .NavBar--container {

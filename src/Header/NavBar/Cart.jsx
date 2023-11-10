@@ -60,7 +60,6 @@ function Cart(props) {
                 }
                 </div>
             )}
-            
         </div>
     )
 }

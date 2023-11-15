@@ -5,6 +5,7 @@ import icon_minus from "../assets/images/icon-minus.svg"
 import ButtonSubmit from "./ButtonSubmit";
 
 function MainCart(props) {
+
     return (
         <div className="Main--block2">
             <div className="Main--subBlock2">

@@ -17,7 +17,7 @@ function MainImg() {
     const handleFullScreen = () => {
       setClicked(!clicked)
     }
-
+    
   return (
     <div className="Main--block1">
 
@@ -39,7 +39,7 @@ function MainImg() {
               <img src={image}
                 alt="image product" 
                 onClick={()=> handleThumbnailClick(image)}
-              />
+                />
             </button>
           </div>
         ))}

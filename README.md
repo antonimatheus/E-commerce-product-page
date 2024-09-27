@@ -4,7 +4,7 @@
 [PROJECT__BADGE]: https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project
 [PROJECT__URL]: https://sneakerproduct.netlify.app/
 
-<h1 align="center" style="font-weight: bold;">Project name 💻</h1>
+<h1 align="center" style="font-weight: bold;">E-commerce product page 💻</h1>
 
 ![react][REACT__BADGE]
 ![vue][VUE__BADGE]

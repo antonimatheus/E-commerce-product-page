@@ -1,6 +1,6 @@
 [JAVASCRIPT__BADGE]: https://img.shields.io/badge/Javascript-000?style=for-the-badge&logo=javascript
 [REACT__BADGE]: https://img.shields.io/badge/React-005CFE?style=for-the-badge&logo=react
-[VUE__BADGE]: https://img.shields.io/badge/CSS3-fff?style=for-the-badge&logo=vue
+[VUE__BADGE]: https://img.shields.io/badge/Vue.js-fff?style=for-the-badge&logo=vue
 [PROJECT__BADGE]: https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project
 [PROJECT__URL]: https://sneakerproduct.netlify.app/
 
